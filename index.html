@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agen BRILink Sribawono milik Heni Kurniawati dengan layanan lengkap, background video, dan peta lokasi dekat Yulia Craft Sribawono.">
+  <title>BRILink Gita cell Sribawono - Heni Kurniawati</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --text:#f8f3eb;
+      --muted:#d7cec1;
+      --line:rgba(255,255,255,.22);
+      --glass:rgba(255,255,255,.08);
+      --glass-strong:rgba(255,255,255,.12);
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --primary:#d6ad62;
+      --primary-2:#f0cf8f;
+      --success:#42d392;
+      --wa:#25D366;
+      --radius-xl:28px;
+      --radius-lg:22px;
+      --radius-md:16px;
+      --container:1180px;
+      --font-body:"Inter",system-ui,sans-serif;
+      --font-display:"Instrument Serif",Georgia,serif;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:var(--font-body);
+      color:var(--text);
+      background:#000;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none;}
+    img,video{display:block;max-width:100%;}
+    button,input,textarea,select{font:inherit;}
+
+    .container{
+      width:min(calc(100% - 24px), var(--container));
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+    }
+
+    /* VIDEO BACKGROUND */
+    .bg-video{
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .video-overlay{
+      position:fixed;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+      background:
+      linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.18)),
+      radial-gradient(circle at top, rgba(0,0,0,.12), transparent 45%),
+      radial-gradient(circle at bottom, rgba(0,0,0,.20), transparent 50%);
+    }
+
+    .brand-mark img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .glass{
+      background:var(--glass);
+      border:1px solid var(--line);
+      backdrop-filter:blur(16px) saturate(170%);
+      -webkit-backdrop-filter:blur(16px) saturate(170%);
+      box-shadow:var(--shadow);
+    }
+
+    .glass-strong{
+      background:var(--glass-strong);
+      border:1px solid rgba(255,255,255,.26);
+      backdrop-filter:blur(22px) saturate(180%);
+      -webkit-backdrop-filter:blur(22px) saturate(180%);
+      box-shadow:var(--shadow);
+    }
+
+    /* NAVBAR */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(0,0,0,.16);
+      border-bottom:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      color:#1a150f;
+      background:conic-gradient(from 180deg, var(--primary-2), var(--primary), #fff6d8, var(--primary-2));
+      box-shadow:0 10px 30px rgba(0,0,0,.4);
+      flex-shrink:0;
+    }
+
+    .brand-copy{
+      font-size:14px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      min-width:0;
+    }
+
+    .brand-copy small{
+      display:block;
+      font-size:11px;
+      font-weight:600;
+      color:var(--muted);
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      font-size:14px;
+      color:var(--muted);
+      justify-content:center;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:11px 16px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:radial-gradient(circle at 0 0, #fff4c4, var(--primary));
+      color:#1a150f;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-outline{
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+    }
+
+    .nav-wa{
+      flex-shrink:0;
+    }
+
+    /* HERO */
+    .hero{
+      padding:72px 0 36px;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      margin-bottom:18px;
+      color:var(--muted);
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--success);
+      box-shadow:0 0 0 6px rgba(66,211,146,.18);
+    }
+
+    h1,h2{
+      font-family:var(--font-display);
+      font-weight:400;
+      line-height:1.02;
+    }
+
+    h1{
+      font-size:clamp(38px, 7vw, 78px);
+      letter-spacing:-.03em;
+      max-width:12ch;
+      margin-bottom:14px;
+    }
+
+    .lead{
+      font-size:15px;
+      color:var(--muted);
+      max-width:60ch;
+      margin-bottom:22px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:22px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+    }
+
+    .metric{
+      padding:14px 12px;
+      border-radius:18px;
+    }
+
+    .metric strong{
+      display:block;
+      font-size:24px;
+      font-weight:800;
+    }
+
+    .metric span{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .hero-card{
+      padding:22px 18px;
+      border-radius:var(--radius-xl);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      right:-60px;
+      bottom:-70px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(240,207,143,.35), transparent 70%);
+      pointer-events:none;
+    }
+
+    .chip-status{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(66,211,146,.12);
+      margin-bottom:12px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .hero-card h3{
+      font-size:24px;
+      margin-bottom:6px;
+    }
+
+    .hero-card p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .mini-tile{
+      padding:12px 10px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.16);
+    }
+
+    .mini-tile strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:13px;
+    }
+
+    .mini-tile p{
+      font-size:12px;
+    }
+
+    /* SECTION */
+    section{
+      padding:30px 0;
+      position:relative;
+      z-index:2;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .section-head h2{
+      font-size:clamp(28px, 4vw, 44px);
+      letter-spacing:-.02em;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:14px;
+      max-width:60ch;
+    }
+
+    .cards-3, .cards-4, .testimonial-grid, .security-grid, .pricing-grid{
+      display:grid;
+      gap:14px;
+    }
+
+    .cards-3{ grid-template-columns:repeat(3,1fr); }
+    .cards-4{ grid-template-columns:repeat(4,1fr); }
+    .testimonial-grid{ grid-template-columns:repeat(3,1fr); }
+    .security-grid{ grid-template-columns:repeat(3,1fr); }
+    .pricing-grid{ grid-template-columns:repeat(3,1fr); }
+
+    .card, .trust-card, .price-card, .testimonial, .security-card, .map-card, .contact-card, .faq-item{
+      padding:18px 16px;
+      border-radius:22px;
+    }
+
+    .card h3, .trust-card h3, .price-card h3, .security-card h3, .contact-card h3{
+      margin-bottom:8px;
+      font-size:17px;
+    }
+
+    .card p, .trust-card p, .price-card p, .testimonial p, .security-card p, .map-card p, .contact-card p{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .service-filter{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:14px;
+    }
+
+    .service-filter button{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.06);
+      color:var(--muted);
+      cursor:pointer;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+
+    .service-filter button.active{
+      background:radial-gradient(circle at 0 0, #fff4c4, var(--primary));
+      color:#1a150f;
+      border-color:transparent;
+      font-weight:700;
+    }
+
+    .table-wrap{
+      overflow:auto;
+      border-radius:24px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+
+    th, td{
+      padding:14px 16px;
+      text-align:left;
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    th{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+      white-space:nowrap;
+    }
+
+    .badge{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .price{
+      font-size:28px;
+      font-weight:800;
+      margin:8px 0 10px;
+    }
+
+    .price small{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .price-card.featured{
+      outline:1px solid rgba(214,173,98,.55);
+      transform:translateY(-2px);
+    }
+
+    .list{
+      list-style:none;
+      display:grid;
+      gap:8px;
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .list li{
+      position:relative;
+      padding-left:15px;
+    }
+
+    .list li::before{
+      content:"";
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--primary);
+      position:absolute;
+      left:0;
+      top:10px;
+    }
+
+    .testimonial .stars{
+      color:var(--primary-2);
+      letter-spacing:2px;
+      margin-bottom:10px;
+      font-size:14px;
+    }
+
+    .testimonial footer{
+      margin-top:10px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .faq-wrap{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:16px;
+    }
+
+    .faq-item{
+      padding:0;
+      overflow:hidden;
+    }
+
+    .faq-btn{
+      width:100%;
+      border:none;
+      background:none;
+      color:var(--text);
+      text-align:left;
+      padding:16px;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      cursor:pointer;
+    }
+
+    .faq-content{
+      max-height:0;
+      overflow:hidden;
+      padding:0 16px;
+      color:var(--muted);
+      transition:max-height .25s ease, padding-bottom .25s ease;
+    }
+
+    .faq-item.active .faq-content{
+      max-height:160px;
+      padding-bottom:14px;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      align-items:start;
+    }
+
+    .map-card iframe{
+      width:100%;
+      min-height:330px;
+      border:0;
+      border-radius:18px;
+      margin-top:12px;
+    }
+
+    .contact-card form{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+    }
+
+    .field{
+      display:grid;
+      gap:6px;
+    }
+
+    .field label{
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .field input, .field textarea, .field select{
+      width:100%;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder{
+      color:#d6cec2;
+    }
+
+    .notice{
+      display:none;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(66,211,146,.12);
+      font-size:13px;
+    }
+
+    .notice.show{
+      display:block;
+    }
+
+    /* TOMBOL WA KECIL */
+    .floating-wa{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:50;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--wa);
+      color:#fff;
+      box-shadow:0 14px 34px rgba(0,0,0,.35);
+      border:2px solid rgba(255,255,255,.18);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .floating-wa:hover{
+      transform:translateY(-2px) scale(1.03);
+      box-shadow:0 18px 40px rgba(0,0,0,.45);
+    }
+
+    .floating-wa::before{
+      content:"";
+      position:absolute;
+      inset:-8px;
+      border-radius:50%;
+      border:1px solid rgba(37,211,102,.35);
+      animation:waPulse 2s infinite;
+    }
+
+    .floating-wa svg{
+      width:28px;
+      height:28px;
+      fill:#fff;
+      display:block;
+    }
+
+    @keyframes waPulse{
+      0%{ transform:scale(.9); opacity:.85; }
+      70%{ transform:scale(1.25); opacity:0; }
+      100%{ transform:scale(1.25); opacity:0; }
+    }
+
+    .footer{
+      padding:28px 0 44px;
+      color:var(--muted);
+      font-size:12px;
+      position:relative;
+      z-index:2;
+    }
+
+    .footer-grid{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      border-top:1px solid rgba(255,255,255,.16);
+      padding-top:16px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .counter{
+      font-variant-numeric:tabular-nums;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid, .faq-wrap, .split{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        display:grid;
+        grid-template-columns:repeat(3,max-content);
+        gap:8px 12px;
+      }
+
+      .hero-points,
+      .cards-3,
+      .cards-4,
+      .testimonial-grid,
+      .security-grid,
+      .pricing-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-head{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      h1{
+        max-width:14ch;
+      }
+
+      .floating-wa{
+        right:14px;
+        bottom:14px;
+        width:54px;
+        height:54px;
+      }
+
+      .floating-wa svg{
+        width:26px;
+        height:26px;
+      }
+
+      /* WA DI NAVBAR DIHILANGKAN SAAT MOBILE */
+      .nav-wa{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="es.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+       <div class="brand-mark">
+  <img src="brilink.jpg" alt="Foto Heni Kurniawati">
+</div>
+          BRILink Gita cell Sribawono
+          <small>Heni Kurniawati • Lampung Timur</small>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#layanan">Layanan</a>
+        <a href="#biaya">Biaya</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#faq">FAQ</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <a class="btn nav-wa" href="https://wa.me/6282180259347?text=Halo%20Bu%20Heni%2C%20saya%20ingin%20tanya%20layanan%20BRILink" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="utama">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow glass">
+            <span class="dot"></span>
+            Agen BRILink aktif • Sribawono
+          </div>
+
+          <h1>Transaksi BRILink mudah, cepat, dan terpercaya.</h1>
+          <p class="lead">
+            Website ini dibuat agar warga Sribawono lebih mudah melihat layanan, biaya admin, lokasi, dan kontak Bu Heni dalam satu halaman yang modern dan mudah dibuka di HP.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/6282180259347?text=Halo%20Bu%20Heni%2C%20saya%20ingin%20transaksi%20BRILink" target="_blank" rel="noopener noreferrer">
+              Transaksi via WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#biaya">Lihat biaya admin</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="metric glass">
+              <strong class="counter" data-target="12">0</strong>
+              <span>Jenis layanan harian</span>
+            </div>
+            <div class="metric glass">
+              <strong class="counter" data-target="7">0</strong>
+              <span>Hari operasional</span>
+            </div>
+            <div class="metric glass">
+              <strong class="counter" data-target="200">0</strong>
+              <span>Perkiraan transaksi/minggu</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="reveal">
+          <div class="hero-card glass-strong">
+            <div class="chip-status">
+              <span class="dot"></span>
+              Status layanan: Buka sekarang
+            </div>
+            <h3>Agen BRILink Sribawono</h3>
+            <p>
+              Dikelola oleh Heni Kurniawati dan melayani transfer, tarik tunai, setor tunai, pembayaran tagihan, top up e-wallet, token listrik, BPJS, dan kebutuhan transaksi harian warga.
+            </p>
+
+            <div class="mini-grid">
+              <div class="mini-tile">
+                <strong>Jam buka</strong>
+                <p>08.00 – 21.00 WIB</p>
+              </div>
+              <div class="mini-tile">
+                <strong>Area</strong>
+                <p>Sribawono & sekitarnya</p>
+              </div>
+              <div class="mini-tile">
+                <strong>Kontak</strong>
+                <p>0821-8025-9347</p>
+              </div>
+              <div class="mini-tile">
+                <strong>Pelayanan</strong>
+                <p>Cepat & aman</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="layanan">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Layanan utama</h2></div>
+          <p>
+            Blok layanan dibuat ringkas agar pengunjung bisa cepat memahami kebutuhan transaksi yang tersedia langsung dari halaman utama.
+          </p>
+        </div>
+
+        <div class="service-filter reveal" aria-label="Filter layanan">
+          <button class="active" data-filter="all">Semua</button>
+          <button data-filter="tunai">Tunai</button>
+          <button data-filter="tagihan">Tagihan</button>
+          <button data-filter="digital">Digital</button>
+        </div>
+
+        <div class="cards-4" id="serviceCards">
+          <article class="card glass reveal" data-category="tunai">
+            <h3>Tarik tunai</h3>
+            <p>Penarikan dana dengan proses cepat dan konfirmasi nominal yang jelas.</p>
+          </article>
+          <article class="card glass reveal" data-category="tunai">
+            <h3>Setor tunai</h3>
+            <p>Setor uang ke rekening tujuan dengan bukti transaksi yang rapi.</p>
+          </article>
+          <article class="card glass reveal" data-category="digital">
+            <h3>Transfer antar bank</h3>
+            <p>Transfer ke sesama BRI maupun bank lain untuk berbagai kebutuhan.</p>
+          </article>
+          <article class="card glass reveal" data-category="tagihan">
+            <h3>Pembayaran tagihan</h3>
+            <p>Listrik, air, BPJS, internet, cicilan, dan tagihan rutin lainnya.</p>
+          </article>
+          <article class="card glass reveal" data-category="digital">
+            <h3>Top up e-wallet</h3>
+            <p>Isi saldo dompet digital dengan proses cepat dan praktis.</p>
+          </article>
+          <article class="card glass reveal" data-category="tagihan">
+            <h3>Token listrik</h3>
+            <p>Pembelian token listrik prabayar berbagai nominal.</p>
+          </article>
+          <article class="card glass reveal" data-category="digital">
+            <h3>Cek saldo & mutasi</h3>
+            <p>Bantu cek saldo dan mutasi rekening secara mudah.</p>
+          </article>
+          <article class="card glass reveal" data-category="tagihan">
+            <h3>Pembayaran cicilan</h3>
+            <p>Bayar cicilan tepat waktu dengan bukti transaksi yang jelas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cards-3">
+        <article class="trust-card glass reveal">
+          <h3>Kontak jelas</h3>
+          <p>Nama pemilik, nomor telepon, dan lokasi yang jelas membuat website lebih terpercaya bagi pelanggan lokal.</p>
+        </article>
+        <article class="trust-card glass reveal">
+          <h3>Biaya transparan</h3>
+          <p>Calon pelanggan bisa melihat estimasi biaya admin sebelum datang atau bertanya melalui WhatsApp.</p>
+        </article>
+        <article class="trust-card glass reveal">
+          <h3>Respons cepat</h3>
+          <p>Tombol WhatsApp kecil di sudut layar membantu akses cepat tanpa memakan ruang navbar di HP. [web:249][web:235]</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="biaya">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Biaya admin transparan</h2></div>
+          <p>
+            Estimasi biaya ditampilkan agar pengunjung merasa lebih aman dan tidak perlu menebak-nebak tarif transaksi.
+          </p>
+        </div>
+
+        <div class="table-wrap glass reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Layanan</th>
+                <th>Estimasi biaya admin</th>
+                <th>Catatan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tarik tunai</td>
+                <td>Rp5.000 – Rp10.000</td>
+                <td>Tergantung nominal transaksi</td>
+              </tr>
+              <tr>
+                <td>Transfer antar bank</td>
+                <td>Rp6.500 – Rp10.000</td>
+                <td>Menyesuaikan bank tujuan</td>
+              </tr>
+              <tr>
+                <td>Setor tunai</td>
+                <td>Mulai Rp5.000</td>
+                <td>Konfirmasi biaya sebelum proses</td>
+              </tr>
+              <tr>
+                <td>Pembayaran tagihan</td>
+                <td>Mulai Rp5.000</td>
+                <td>Berbeda tiap biller</td>
+              </tr>
+              <tr>
+                <td>Top up e-wallet</td>
+                <td>Mulai Rp5.000</td>
+                <td>Nominal dan promo dapat berbeda</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container pricing-grid">
+        <article class="price-card glass reveal">
+          <h3>Quick Service</h3>
+          <div class="price">3 menit <small>estimasi</small></div>
+          <p>Layanan cepat untuk transaksi sederhana seperti cek saldo dan pembayaran kecil.</p>
+          <ul class="list">
+            <li>Proses singkat</li>
+            <li>Cocok untuk transaksi rutin</li>
+            <li>Konfirmasi nominal di awal</li>
+          </ul>
+        </article>
+
+        <article class="price-card glass featured reveal">
+          <div class="badge">Paling diminati</div>
+          <h3>Daily Transaction</h3>
+          <div class="price">Lengkap <small>harian</small></div>
+          <p>Paket layanan harian warga Sribawono: transfer, tarik tunai, setor, dan bayar tagihan.</p>
+          <ul class="list">
+            <li>Layanan paling sering dipakai</li>
+            <li>Biaya dijelaskan dengan jelas</li>
+            <li>Tersedia setiap hari</li>
+          </ul>
+        </article>
+
+        <article class="price-card glass reveal">
+          <h3>Priority Help</h3>
+          <div class="price">Responsif <small>via WA</small></div>
+          <p>Untuk pelanggan yang ingin bertanya dulu sebelum datang ke lokasi agen.</p>
+          <ul class="list">
+            <li>Format chat otomatis</li>
+            <li>Mudah untuk pelanggan baru</li>
+            <li>Cocok di luar jam ramai</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimoni">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Testimoni pelanggan</h2></div>
+          <p>Ulasan pelanggan membantu membangun kepercayaan dan menunjukkan manfaat layanan secara nyata.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial glass reveal">
+            <div class="stars">★★★★★</div>
+            <p>Pelayanannya cepat, biaya dijelaskan dulu, jadi saya merasa aman saat transfer nominal besar.</p>
+            <footer>Rina • Pelanggan Sribawono</footer>
+          </article>
+          <article class="testimonial glass reveal">
+            <div class="stars">★★★★★</div>
+            <p>Enak bisa tanya dulu lewat WhatsApp sebelum datang, jadi tidak buang waktu.</p>
+            <footer>Fajar • Warga sekitar</footer>
+          </article>
+          <article class="testimonial glass reveal">
+            <div class="stars">★★★★★</div>
+            <p>Bayar listrik, BPJS, dan cicilan jadi lebih praktis. Bukti transaksinya juga jelas.</p>
+            <footer>Siti • Pelanggan harian</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Edukasi keamanan transaksi</h2></div>
+          <p>Informasi keamanan sederhana membantu pelanggan menjaga data penting mereka saat bertransaksi.</p>
+        </div>
+
+        <div class="security-grid">
+          <article class="security-card glass reveal">
+            <h3>Jangan berikan PIN & OTP</h3>
+            <p>PIN, OTP, dan data sensitif tidak boleh dibagikan kepada siapa pun.</p>
+          </article>
+          <article class="security-card glass reveal">
+            <h3>Cek nama & nominal</h3>
+            <p>Pastikan nama tujuan dan nominal sudah benar sebelum transaksi diproses.</p>
+          </article>
+          <article class="security-card glass reveal">
+            <h3>Simpan bukti transaksi</h3>
+            <p>Simpan bukti transaksi sebagai arsip, terutama untuk tagihan dan cicilan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container faq-wrap">
+        <div>
+          <div class="section-head reveal">
+            <div><h2>FAQ singkat</h2></div>
+            <p>Pertanyaan umum ditampilkan dalam format ringkas agar mudah dibuka di desktop maupun HP.</p>
+          </div>
+        </div>
+
+        <div>
+          <article class="faq-item glass reveal active">
+            <button class="faq-btn">
+              Apakah bisa tarik tunai di sini?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>Ya, tarik tunai tersedia selama sistem normal dan saldo kas mencukupi.</p>
+            </div>
+          </article>
+
+          <article class="faq-item glass reveal">
+            <button class="faq-btn">
+              Apakah bisa transfer antar bank?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>Bisa. Transfer ke berbagai bank dapat dilakukan dengan biaya menyesuaikan jaringan.</p>
+            </div>
+          </article>
+
+          <article class="faq-item glass reveal">
+            <button class="faq-btn">
+              Bisa tanya dulu lewat WhatsApp?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>Ya, tombol WhatsApp di halaman ini akan langsung membuka chat ke Bu Heni.</p>
+            </div>
+          </article>
+
+          <article class="faq-item glass reveal">
+            <button class="faq-btn">
+              Apakah biaya admin selalu sama?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>Tidak selalu. Biaya dapat berubah tergantung layanan, nominal, dan kebijakan terbaru.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="lokasi">
+      <div class="container split">
+        <article class="map-card glass reveal">
+          <h3>Lokasi dekat Yulia Craft Sribawono</h3>
+          <p>
+            Peta berikut diarahkan ke area Yulia Craft Sribawono di Bandar Sribhawono, Lampung Timur,
+            sehingga pelanggan dapat menjadikan titik ini sebagai patokan lokasi sekitar agen. [web:124][web:185]
+          </p>
+          <iframe
+            title="Peta lokasi Yulia Craft Sribawono"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Yulia+Craft+Sribawono+Lampung+Timur&z=17&maptype=roadmap&output=embed">
+          </iframe>
+        </article>
+
+        <article class="contact-card glass reveal" id="kontak">
+          <h3>Kontak & formulir cepat</h3>
+          <p>
+            Silakan hubungi langsung Heni Kurniawati untuk pertanyaan layanan, jam buka, atau kebutuhan transaksi tertentu.
+          </p>
+
+          <ul class="list">
+            <li>Nama agen: BRILink Sribawono</li>
+            <li>Pemilik: Heni Kurniawati</li>
+            <li>Alamat: Sribawono, Bandar Sribhawono, Lampung Timur</li>
+            <li>Telepon: <a href="tel:+6282180259347">0821-8025-9347</a></li>
+            <li>
+              WhatsApp:
+              <a href="https://wa.me/6282180259347?text=Halo%20Bu%20Heni%20dari%20website%20BRILink" target="_blank" rel="noopener noreferrer">
+                Mulai chat sekarang
+              </a>
+            </li>
+            <li>Jam operasional: 08.00 – 21.00 WIB</li>
+          </ul>
+
+          <form id="leadForm">
+            <div class="field">
+              <label for="nama">Nama</label>
+              <input id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <div class="field">
+              <label for="layananForm">Butuh layanan apa?</label>
+              <select id="layananForm" name="layanan">
+                <option>Transfer</option>
+                <option>Tarik tunai</option>
+                <option>Setor tunai</option>
+                <option>Bayar tagihan</option>
+                <option>Top up e-wallet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" rows="4" placeholder="Tulis pertanyaan singkat Anda"></textarea>
+            </div>
+
+            <button class="btn" type="submit">Kirim pertanyaan via WhatsApp</button>
+
+            <div class="notice" id="noticeBox">
+              Pesan berhasil disiapkan. Anda akan diarahkan ke WhatsApp sebentar lagi.
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <a
+    class="floating-wa"
+    href="https://wa.me/6282180259347?text=Halo%20Bu%20Heni%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20BRILink"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat WhatsApp"
+    title="Chat WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.21c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.2-.34.22-.63.08-.29-.15-1.24-.46-2.36-1.47-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.64-1.55-.88-2.13-.23-.55-.47-.47-.64-.48h-.55c-.2 0-.51.07-.78.37-.27.29-1.03 1-1.03 2.45 0 1.45 1.05 2.84 1.2 3.03.15.2 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.33.19 1.84.12.56-.08 1.7-.69 1.94-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.34zM16.14 27h-.01a10.8 10.8 0 0 1-5.49-1.5l-.39-.23-4.08 1.07 1.09-3.98-.25-.41a10.85 10.85 0 1 1 9.13 5.05zm9.16-10.83c0-5.07-4.12-9.19-9.2-9.19s-9.2 4.12-9.2 9.19c0 1.79.52 3.54 1.5 5.04l.24.37-.64 2.34 2.4-.63.36.21a9.22 9.22 0 0 0 4.34 1.09h.01c5.07 0 9.19-4.12 9.19-9.19z"/>
+    </svg>
+  </a>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p></center>© 2026 BRILink Sribawono – Heni Kurniawati.</center></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealEls.forEach((el) => io.observe(el));
+
+      const counters = document.querySelectorAll(".counter");
+      const counterObs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = Number(el.dataset.target) || 0;
+          let startTime = null;
+          const duration = 1200;
+
+          const step = (ts) => {
+            if (!startTime) startTime = ts;
+            const progress = Math.min((ts - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * target).toLocaleString("id-ID");
+            if (progress < 1) requestAnimationFrame(step);
+          };
+
+          requestAnimationFrame(step);
+          counterObs.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach((c) => counterObs.observe(c));
+
+      const filterButtons = document.querySelectorAll(".service-filter button");
+      const serviceCards = document.querySelectorAll("#serviceCards [data-category]");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+
+          serviceCards.forEach((card) => {
+            card.style.display =
+              filter === "all" || card.dataset.category === filter ? "block" : "none";
+          });
+        });
+      });
+
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const btn = item.querySelector(".faq-btn");
+        btn.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+
+      const leadForm = document.getElementById("leadForm");
+      const noticeBox = document.getElementById("noticeBox");
+
+      if (leadForm) {
+        leadForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const nama = document.getElementById("nama").value.trim() || "Pelanggan";
+          const layanan = document.getElementById("layananForm").value;
+          const pesan = document.getElementById("pesan").value.trim();
+          const text = encodeURIComponent(
+            `Halo Bu Heni, saya ${nama}. Saya ingin bertanya tentang layanan ${layanan}. ${pesan}`
+          );
+
+          noticeBox.classList.add("show");
+
+          setTimeout(() => {
+            window.open(`https://wa.me/6282180259347?text=${text}`, "_blank", "noopener");
+          }, 600);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
